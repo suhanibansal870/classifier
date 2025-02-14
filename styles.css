@@ -1,0 +1,184 @@
+html,
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(210, 244, 254);
+  text-align: center;
+  line-height: 2.5em;
+}
+
+.message {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 10rem;
+  color: rgb(1, 27, 17);
+  text-shadow: 2px 2px 3px #ffffff, 0 0 5px rgb(76, 156, 58);
+  background: transparent;
+  width: 100%;
+}
+
+.intro{
+    padding:1%;
+    font-size: 1.32rem;
+    width:80%;
+    margin:120;
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.762);
+}
+
+h1,
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  text-shadow: 2px 2px rgb(188, 184, 184);
+}
+
+
+h3 {
+  font-family: "Quicksand", serif;
+}
+
+canvas {
+  display: block;
+}
+
+img {
+  border: 10px;
+  border-color: white;
+}
+
+/* CSS */
+.button {
+  background-color: rgb(104, 134, 179); /* Green */
+  transition-duration: 0.4s;
+  padding: 14px 40px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Quicksand", serif;
+  border-radius: 2%;
+  margin:20px;
+  width:12%;
+
+}
+
+.classifierbtn{
+    background-color: rgb(104, 134, 179); /* Green */
+  transition-duration: 0.4s;
+  padding: 14px 40px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Quicksand", serif;
+  border-radius: 2%;
+  margin:20px;
+  width:230%;
+  height:50%;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #3185c1; /* Green */
+  color: white;
+  padding: 14px 40px;
+  cursor: pointer;
+  opacity:30%;
+}
+.classifierbtn:hover {
+    background-color: #3185c1; /* Green */
+    color: white;
+    padding: 14px 40px;
+    cursor: pointer;
+    opacity:30%;
+  }
+
+.column {
+  float: left;
+  /* width: 33.33%; */
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.hot {
+  margin-left: 550px;
+  width: 75%;
+}
+
+.risingTemp {
+  padding: 5%;
+  background: rgb(196, 225, 214);
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  width: 60%;
+  margin-left: 300px;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.317);
+  padding: 10px;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+.action {
+  background-color: rgba(255, 255, 255, 0.257);
+  width: 60%;
+}
+
+.data_source {
+  color: blue;
+}
+
+.data_source:hover {
+  color: rgb(72, 35, 100);
+}
+
+#conclusion {
+  width: 170%;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.317);
+  padding: 5%;
+}
+
+#actiony {
+  margin-left: 330px;
+  width: 35%;
+}
+
+/* .data_desc {
+  /* font-size: 1rem;
+  width: 100%; */
+
+h5 {
+  font-family: "Quicksand", sans-serif;
+}
+
+#slideshow {
+  margin-left: 400px;
+}
+
+#introduction{
+    background-image: url(bckgrn-imagetoolspro.jpeg);
+    padding:70;
+}

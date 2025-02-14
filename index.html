@@ -1,0 +1,179 @@
+<html lang="en"><head>
+    <script type="text/javascript" src="https://codesandbox.io/public/sse-hooks/sse-hooks.e15ace8ccace5398a721ffec81f121de.js"></script>
+    <script type="text/javascript" src="https://codesandbox.io/static/js/banner.d9cb10a38.js"></script>
+
+    <script src="DisplayError.js"></script>
+    <script crossorigin="" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script crossorigin="" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&amp;family=Quicksand:wght@300..700&amp;display=swap" rel="stylesheet">
+    
+
+  </head>
+  <body>
+    <main>
+      <section id="introduction">
+      <h1 class="message" style = "font-size: 8rem;">Identification Adventure!</h1>
+      <p class = "intro">Would you like to enhance your experience in nature? If you do, this is the right place for you! This website links <b>image classifiers for beaches, forests, mountains, and various natural habitats</b>! Click on the buttons below to access it, depending on where you are. Once you do, you will be able to take pictures of natural habitats for the species listed in the bottom panel, to find some of the most common ones in your designated area!</p>
+<br>
+          
+
+      <a href="#risingTemp"><button role="button" class="button">
+        Beach
+      </button></a>
+      <a href="#airPollution"><button role="button" class="button">
+        Mountains
+      </button></a>
+      <a href="#observations"><button role="button" class="button">
+        Residential
+      </button></a>
+      <a href="#action"><button role="button" class="button">
+        Redwood
+      </button></a>
+      <a href="#forest"><button role="button" class="button">
+        Forest
+      </button></a>
+      </section>
+      
+      <section id="risingTemp" class="risingTemp">
+      <h1 style="font-size: 2rem;">Beach Species Identification</h1>
+
+      <p style="font-size:1.3rem; width:100%; margin: 30; text-align: center;"><b>Species to identify:</b> barnacles, flowers, grass, kelp, mussels, primroses, sage bushes, seagulls, and seashells!</p>
+      <div class="row">
+        <div class="column">
+          <div id="c2">
+                <img src="bch_rcrding-ezgif.com-video-to-gif-converter.gif">
+             </div>
+        </div>
+        <!-- <div class="column">
+          <button>Image Classifier</button>
+        </div> -->
+        <div class="column">
+            <a href="https://huggingface.co/spaces/sbansal28/beachclassifier" target="_blank"><button role="button" class="classifierbtn">Get Started</button></a>
+          
+        </div>
+        
+        <button class = "button" style = "width:100%; text-decoration: none; background-color: rgb(196, 225, 214); padding:10"><a href = "#introduction">More options?</a></button>
+      </div>
+
+
+    </section>
+    <section id = "airPollution">
+      <br>
+      <h1 style = "font-size: 2rem;">Mountain Species Identification</h1>
+      <p style="font-size:1.3rem; width:100%; margin: 30; text-align: center;"><b>Species to identify:</b> bird, lizard, pine, squirrel, wildflower</p>
+
+      <div class="row">
+        <div class="column">
+            <a href="https://huggingface.co/spaces/sbansal28/mountain" target="_blank" ><button role="button" class="classifierbtn" >Get Started</button></a>
+          
+        </div>
+
+        <div class="column">
+          <div id="c2" style = "margin-left: 350px;">
+                <img src="mtn-ezgif.com-video-to-gif-converter.gif">
+             </div>
+        </div>
+        <!-- <div class="column">
+          <button>Image Classifier</button>
+        </div> -->
+        
+        <button class = "button" style = "width:100%; text-decoration: none; background-color: rgb(210, 244, 254); padding:10"><a href = "#introduction">More options?</a></button>
+
+
+      </div>
+    </section>
+
+      <br>
+      <br>
+
+      <section class="risingTemp" id="observations">
+        <h1 style="font-size: 2rem;">Residential Species Identification</h1>
+      <p style="font-size:1.3rem; width:100%; margin: 30; text-align: center;"><b>Species to identify:</b> bird, squirrel, bee, daisy, ivy, ladybug, rose, spider</p>
+
+      <div class="row">
+        <div class="column">
+          <div id="c2">
+                <img src="rsdtl-ezgif.com-video-to-gif-converter.gif">
+             </div>
+        </div>
+        <!-- <div class="column">
+          <button>Image Classifier</button>
+        </div> -->
+        <div class="column">
+            <a href="https://huggingface.co/spaces/sbansal28/residential" target="_blank"><button role="button" class="classifierbtn">Get Started</button></a>
+          
+        </div>
+        
+        <button class = "button" style = "width:100%; text-decoration: none; background-color: rgb(196, 225, 214); padding:10"><a href = "#introduction">More options?</a></button>
+
+      </div>
+        
+      </section>
+      <section class="" id="action">
+        <br>
+      <h1 style = "font-size: 2rem;">Redwood Species Identification</h1>
+      <p style="font-size:1.3rem; width:100%; margin: 30; text-align: center;"><b>Species to identify:</b> banana slug, bird, butterfly, fern, moss</p>
+
+      <div class="row">
+        <div class="column">
+            <a href="https://huggingface.co/spaces/sbansal28/redwood" target="_blank" ><button role="button" class="classifierbtn" >Get Started</button></a>
+          
+        </div>
+        <div class="column">
+          <div id="c2" style = "margin-left: 350px;">
+                <img src="rdwd-ezgif.com-video-to-gif-converter.gif">
+             </div>
+        </div>
+        <!-- <div class="column">
+          <button>Image Classifier</button>
+        </div> -->
+        
+        <button class = "button" style = "width:100%; text-decoration: none; background-color: rgb(210, 244, 254); padding:10"><a href = "#introduction">More options?</a></button>
+
+
+      </div>
+      </section>
+      
+
+      
+      
+
+      <section class="risingTemp" id="forest">
+        <h1 style="font-size: 2rem;">Forest Species Identification</h1>
+      <p style="font-size:1.3rem; width:100%; margin: 30; text-align: center;"><b>Species to identify:</b> ant, bird, fern, moss, poison oak, snail, squirrel, tree, wildflower</p>
+
+      <div class="row">
+        <div class="column">
+          <div id="c2">
+                <img src="frst-ezgif.com-video-to-gif-converter.gif">
+             </div>
+        </div>
+        <!-- <div class="column">
+          <button>Image Classifier</button>
+        </div> -->
+        <div class="column">
+            <a href="https://huggingface.co/spaces/sbansal28/forest" target="_blank"><button role="button" class="classifierbtn">Get Started</button></a>
+          
+        </div>
+        
+        <button class = "button" style = "width:100%; text-decoration: none; background-color: rgb(196, 225, 214); padding:10"><a href = "#introduction">More options?</a></button>
+
+      </div>
+        
+      </section>
+      
+      
+  </section>
+</main>
+
+</body></html>
