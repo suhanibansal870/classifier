@@ -1,56 +1,64 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script
-      type="text/javascript"
-      src="https://codesandbox.io/public/sse-hooks/sse-hooks.e15ace8ccace5398a721ffec81f121de.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://codesandbox.io/static/js/banner.d9cb10a38.js"
-    ></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Outdoor Odyssey</title>
 
-    <script src="DisplayError.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ If p5 is required, load it with defer so it doesn’t block/partially load -->
     <script
+      defer
       crossorigin
       src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"
     ></script>
     <script
+      defer
       crossorigin
       src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"
     ></script>
 
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <meta charset="utf-8" />
+    <!-- ✅ Only keep your own scripts if you actually need them -->
+    <!-- If DisplayError.js is only for CodeSandbox, remove it too -->
+    <script defer src="DisplayError.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- ✅ Overlay/canvas click-fix -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
+      /* Ensure your page content stays above any accidental overlays */
+      main {
+        position: relative;
+        z-index: 2;
+      }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+      /* If p5 creates a full-screen canvas, don’t let it steal clicks */
+      canvas {
+        pointer-events: none; /* key fix: allows links/buttons to be clickable */
+      }
 
-    <title>Outdoor Odyssey</title>
+      /* Optional: make anchored sections stop under any fixed headers (if you have them) */
+      section {
+        scroll-margin-top: 20px;
+      }
+    </style>
   </head>
 
   <body>
     <main>
       <section id="introduction">
-        <h1 class="message" style="font-size: 8rem;">Outdoor Odyssey</h1>
+        <h1 class="message" style="font-size: 8rem">Outdoor Odyssey</h1>
 
         <p class="intro">
           Would you like to enhance your experience in nature? If you do, this
@@ -75,9 +83,16 @@
       </section>
 
       <section id="beach" class="risingTemp">
-        <h1 style="font-size: 2rem;">Beach Species Identification</h1>
+        <h1 style="font-size: 2rem">Beach Species Identification</h1>
 
-        <p style="font-size: 1.3rem; width: 100%; margin: 30px; text-align: center;">
+        <p
+          style="
+            font-size: 1.3rem;
+            width: 100%;
+            margin: 30px;
+            text-align: center;
+          "
+        >
           <b>Species to identify:</b> barnacles, flowers, grass, kelp, mussels,
           primroses, sage bushes, seagulls, and seashells!
         </p>
@@ -103,10 +118,7 @@
             >
           </div>
 
-          <a
-            class="button moreoptions"
-            href="#introduction"
-            role="button"
+          <a class="button moreoptions" href="#introduction" role="button"
             >More options?</a
           >
         </div>
@@ -114,9 +126,16 @@
 
       <section id="mountains">
         <br />
-        <h1 style="font-size: 2rem;">Mountain Species Identification</h1>
+        <h1 style="font-size: 2rem">Mountain Species Identification</h1>
 
-        <p style="font-size: 1.3rem; width: 100%; margin: 30px; text-align: center;">
+        <p
+          style="
+            font-size: 1.3rem;
+            width: 100%;
+            margin: 30px;
+            text-align: center;
+          "
+        >
           <b>Species to identify:</b> bird, lizard, pine, squirrel, wildflower
         </p>
 
@@ -150,13 +169,19 @@
         </div>
       </section>
 
-      <br />
-      <br />
+      <br /><br />
 
       <section class="risingTemp" id="residential">
-        <h1 style="font-size: 2rem;">Residential Species Identification</h1>
+        <h1 style="font-size: 2rem">Residential Species Identification</h1>
 
-        <p style="font-size: 1.3rem; width: 100%; margin: 30px; text-align: center;">
+        <p
+          style="
+            font-size: 1.3rem;
+            width: 100%;
+            margin: 30px;
+            text-align: center;
+          "
+        >
           <b>Species to identify:</b> bird, squirrel, bee, daisy, ivy, ladybug,
           rose, spider
         </p>
@@ -182,10 +207,7 @@
             >
           </div>
 
-          <a
-            class="button moreoptions"
-            href="#introduction"
-            role="button"
+          <a class="button moreoptions" href="#introduction" role="button"
             >More options?</a
           >
         </div>
@@ -193,9 +215,16 @@
 
       <section id="redwood">
         <br />
-        <h1 style="font-size: 2rem;">Redwood Species Identification</h1>
+        <h1 style="font-size: 2rem">Redwood Species Identification</h1>
 
-        <p style="font-size: 1.3rem; width: 100%; margin: 30px; text-align: center;">
+        <p
+          style="
+            font-size: 1.3rem;
+            width: 100%;
+            margin: 30px;
+            text-align: center;
+          "
+        >
           <b>Species to identify:</b> banana slug, bird, butterfly, fern, moss
         </p>
 
@@ -230,9 +259,16 @@
       </section>
 
       <section class="risingTemp" id="forest">
-        <h1 style="font-size: 2rem;">Forest Species Identification</h1>
+        <h1 style="font-size: 2rem">Forest Species Identification</h1>
 
-        <p style="font-size: 1.3rem; width: 100%; margin: 30px; text-align: center;">
+        <p
+          style="
+            font-size: 1.3rem;
+            width: 100%;
+            margin: 30px;
+            text-align: center;
+          "
+        >
           <b>Species to identify:</b> ant, bird, fern, moss, poison oak, snail,
           squirrel, tree, wildflower
         </p>
@@ -258,10 +294,7 @@
             >
           </div>
 
-          <a
-            class="button moreoptions"
-            href="#introduction"
-            role="button"
+          <a class="button moreoptions" href="#introduction" role="button"
             >More options?</a
           >
         </div>
