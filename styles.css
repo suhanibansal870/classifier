@@ -184,3 +184,29 @@ h5 {
 .moreoptions.blueoptions {
   background-color: rgb(210, 244, 254);
 }
+
+/* --- Fix: Mountain/Redwood buttons not clickable (right-side GIF overlay) --- */
+.row { position: relative; }
+
+.column { 
+  position: relative; 
+  z-index: 1;
+}
+
+/* Make the clickable button always be above any media */
+.classifierbtn, .button {
+  position: relative;
+  z-index: 10;
+}
+
+/* The GIF column should never block clicks on the other column */
+.rightgif,
+.rightgif img {
+  pointer-events: none;
+}
+
+/* If your CSS uses absolute positioning on the GIF container, neutralize it */
+.rightgif {
+  position: static !important;
+}
+
