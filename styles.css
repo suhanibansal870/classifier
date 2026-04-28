@@ -1,212 +1,144 @@
-html,
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  background-color: rgb(210, 244, 254);
+  padding: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: linear-gradient(to bottom, #d2f4fe, #ffffff);
+  color: #012b22;
+}
+
+/* ---------- HERO ---------- */
+#introduction {
   text-align: center;
-  line-height: 2.5em;
+  padding: 120px 20px;
+  min-height: 100vh;
+  background-image: url(bckgrn-imagetoolspro.jpeg);
+  background-size: cover;
+  background-position: center;
 }
 
 .message {
   font-family: "Dancing Script", cursive;
-  font-weight: 700;
-  font-size: 10rem;
-  color: rgb(1, 27, 17);
-  text-shadow: 2px 2px 3px #ffffff, 0 0 5px rgb(76, 156, 58);
-  background: transparent;
-  width: 100%;
+  font-size: clamp(4rem, 10vw, 8rem);
+  margin-bottom: 20px;
 }
 
 .intro {
-  padding: 1%;
-  font-size: 1.32rem;
-  width: 80%;
-  margin: 120px auto 0 auto;
-  margin-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.762);
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  font-size: 1.4rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
 }
 
-h1,
-h2 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  text-shadow: 2px 2px rgb(188, 184, 184);
-}
-
-h3 {
-  font-family: "Quicksand", serif;
-}
-
-canvas {
-  display: block;
-}
-
-img {
-  border: 10px solid white;
+/* ---------- NAV BUTTONS ---------- */
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
 }
 
 .button {
-  background-color: rgb(104, 134, 179);
-  transition-duration: 0.4s;
-  border: none;
+  background: #6886b3;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
+  padding: 18px 36px;
+  border-radius: 10px;
+  font-size: 1.2rem;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-family: "Quicksand", serif;
-  border-radius: 2%;
-  margin: 20px;
-  width: 12%;
-}
-
-.classifierbtn {
-  background-color: rgb(104, 134, 179);
-  transition-duration: 0.4s;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-family: "Quicksand", serif;
-  border-radius: 2%;
-  margin: 20px;
-  width: 230%;
-  height: 50%;
-  font-size: 1.3rem;
-  font-weight: bold;
+  transition: 0.3s;
+  font-weight: 600;
 }
 
 .button:hover {
-  background-color: #3185c1;
+  background: #3185c1;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 100px 20px;
+  min-height: 90vh;
+}
+
+.section.alt {
+  background: #e4f5ef;
+}
+
+.section h2 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: 1.4rem;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.card img {
+  width: clamp(320px, 40vw, 600px);
+  border-radius: 16px;
+  border: 8px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ---------- CTA BUTTON ---------- */
+.classifierbtn {
+  background: #6886b3;
   color: white;
-  cursor: pointer;
-  opacity: 30%;
-}
-
-.classifierbtn:hover {
-  background-color: #3185c1;
-  color: white;
-  cursor: pointer;
-  opacity: 30%;
-}
-
-.column {
-  float: left;
-  padding: 5px;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.risingTemp {
-  padding: 5%;
-  background: rgb(196, 225, 214);
-}
-
-p {
-  font-family: "Quicksand", sans-serif;
-  width: 60%;
-  margin: 0 auto;
-  font-size: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.317);
-  padding: 10px;
-}
-
-ul {
-  list-style-type: square;
-  list-style-position: outside;
-  list-style-image: none;
-}
-
-.action {
-  background-color: rgba(255, 255, 255, 0.257);
-  width: 60%;
-}
-
-.data_source {
-  color: blue;
-}
-
-.data_source:hover {
-  color: rgb(72, 35, 100);
-}
-
-#conclusion {
-  width: 100%;
-  margin: 10px auto;
-  background-color: rgba(255, 255, 255, 0.317);
-  padding: 5%;
-}
-
-#actiony {
-  margin: 0 auto;
-  width: 35%;
-}
-
-h5 {
-  font-family: "Quicksand", sans-serif;
-}
-
-#slideshow {
-  margin: 0 auto;
-}
-
-#introduction {
-  background-image: url(bckgrn-imagetoolspro.jpeg);
-  padding: 70px;
-}
-
-/* Helpers for layout parity with your original inline styles */
-.c2 {
+  padding: 22px 44px;
+  border-radius: 14px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: 0.3s;
   display: inline-block;
 }
 
-.rightgif {
-  margin-left: 350px;
+.classifierbtn:hover {
+  background: #3185c1;
+  transform: scale(1.08);
 }
 
-/* “More options?” buttons keep your two background colors */
-.moreoptions {
-  width: 100%;
+/* ---------- BACK LINK ---------- */
+.back-link {
+  display: block;
+  margin-top: 50px;
+  text-align: center;
   text-decoration: none;
-  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1d5c8a;
 }
 
-.moreoptions:not(.blueoptions) {
-  background-color: rgb(196, 225, 214);
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+  }
 }
-
-.moreoptions.blueoptions {
-  background-color: rgb(210, 244, 254);
-}
-
-/* --- Fix: Mountain/Redwood buttons not clickable (right-side GIF overlay) --- */
-.row { position: relative; }
-
-.column { 
-  position: relative; 
-  z-index: 1;
-}
-
-/* Make the clickable button always be above any media */
-.classifierbtn, .button {
-  position: relative;
-  z-index: 10;
-}
-
-/* The GIF column should never block clicks on the other column */
-.rightgif,
-.rightgif img {
-  pointer-events: none;
-}
-
-/* If your CSS uses absolute positioning on the GIF container, neutralize it */
-.rightgif {
-  position: static !important;
-}
-
