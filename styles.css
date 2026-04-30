@@ -6,64 +6,119 @@
 
 body {
   font-family: "Quicksand", sans-serif;
-  background: linear-gradient(to bottom, #d2f4fe, #ffffff);
   color: #012b22;
+  background: #f7fbf9;
 }
 
-/* ---------- HERO ---------- */
+/* TOP BAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: #6886b3;
+  color: white;
+  align-items: center;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background: #6886b3;
+  color: white;
+}
+
+/* center nav nicely */
+.nav-links {
+  display: flex;
+  gap: 10px;
+  background: rgba(255,255,255,0.15);
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.nav-links a {
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+/* active tab */
+.nav-links a.active {
+  background: white;
+  color: #6886b3;
+}
+
+/* keep stats tight */
+.stats {
+  display: flex;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+/* HERO */
 #introduction {
-  text-align: center;
-  padding: 120px 20px;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url(bckgrn-imagetoolspro.jpeg);
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(255,255,255,0.9);
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 900px;
 }
 
 .message {
   font-family: "Dancing Script", cursive;
-  font-size: clamp(4rem, 10vw, 8rem);
-  margin-bottom: 20px;
+  font-size: clamp(4rem, 10vw, 7rem);
 }
 
 .intro {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 30px;
-  font-size: 1.4rem;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.85);
+  font-size: 1.3rem;
+  margin: 20px 0 30px;
 }
 
-/* ---------- NAV BUTTONS ---------- */
+/* NAV */
 .nav-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-top: 40px;
 }
 
 .button {
+  padding: 16px 32px;
+  font-size: 1.1rem;
   background: #6886b3;
   color: white;
-  padding: 18px 36px;
-  border-radius: 10px;
-  font-size: 1.2rem;
+  border-radius: 12px;
   text-decoration: none;
-  transition: 0.3s;
-  font-weight: 600;
 }
 
-.button:hover {
-  background: #3185c1;
-  transform: translateY(-3px) scale(1.05);
-}
-
-/* ---------- SECTIONS ---------- */
+/* SECTION */
 .section {
   padding: 100px 20px;
-  min-height: 90vh;
 }
 
 .section.alt {
@@ -72,73 +127,612 @@ body {
 
 .section h2 {
   text-align: center;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
 }
 
-.section p {
+.section-desc {
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto 50px;
-  font-size: 1.4rem;
+  opacity: 0.7;
+  margin-bottom: 25px;
 }
 
-/* ---------- CARD ---------- */
+/* CARD */
 .card {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  gap: 40px;
   justify-content: center;
-  gap: 60px;
+  align-items: center;
 }
 
 .card img {
-  width: clamp(320px, 40vw, 600px);
-  border-radius: 16px;
-  border: 8px solid white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: clamp(300px, 40vw, 600px);
+  border-radius: 20px;
 }
 
-/* ---------- CTA BUTTON ---------- */
+/* SIDE */
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* BUTTON */
 .classifierbtn {
+  padding: 18px;
+  font-size: 1.2rem;
   background: #6886b3;
   color: white;
-  padding: 22px 44px;
   border-radius: 14px;
-  font-size: 1.4rem;
-  text-decoration: none;
-  transition: 0.3s;
-  display: inline-block;
-}
-
-.classifierbtn:hover {
-  background: #3185c1;
-  transform: scale(1.08);
-}
-
-/* ---------- BACK LINK ---------- */
-.back-link {
-  display: block;
-  margin-top: 50px;
   text-align: center;
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #1d5c8a;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-  }
+/* HINT */
+.hint {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  text-align: center;
+}
 
-  .section {
-    padding: 70px 20px;
+/* SPECIES */
+.species-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 15px;
+}
+
+.species {
+  padding: 18px;
+  background: white;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.species:hover {
+  transform: scale(1.05);
+}
+
+.species.found {
+  background: linear-gradient(135deg, #4f7db8, #7aa7d6);
+  color: white;
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* PROGRESS */
+.progress {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* JOURNAL */
+#journal-section {
+  padding: 100px 20px;
+  background: #dff3ea;
+  text-align: center;
+}
+
+#journal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.entry {
+  padding: 12px 20px;
+  background: white;
+  border-radius: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .overlay {
+    padding: 30px;
   }
 
   .intro {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
+
+  .species-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.journal-link {
+  margin-left: 15px;
+  color: white;
+  text-decoration: underline;
+}
+
+/* removes “white box” feel */
+.overlay {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.entry span {
+  outline: none;
+  display: inline-block;
+  padding: 6px 10px;
+}
+
+.entry span:focus {
+  background: #fff;
+  border-radius: 6px;
+}
+
+/* CHECKBOX STYLE */
+.species {
+  position: relative;
+  padding-left: 45px; /* space for checkbox */
+  text-align: left;
+}
+
+/* checkbox box */
+.species::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid #6886b3;
+  border-radius: 4px;
+  background: white;
+}
+
+/* checkmark when selected */
+.species.found::after {
+  content: "✔";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-55%);
+  font-size: 14px;
+  color: white;
+}
+
+/* keep your gradient but make checkbox match */
+.species.found::before {
+  background: #4f7db8;
+  border-color: #4f7db8;
+}
+
+/* NAV LINKS IN TOPBAR */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.instructions {
+  margin-top: 25px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #012b22;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* remove boxy look */
+.instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.instructions li {
+  margin: 8px 0;
+  opacity: 0.85;
+}
+
+/* subtle icons instead of bullets */
+.instructions li::before {
+  content: "• ";
+  color: #6886b3;
+  font-weight: bold;
+}
+
+.instructions h3 {
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.toggle-help {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.help-content {
+  display: none;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+.xp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.xp-bar {
+  width: 120px;
+  height: 8px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#xp-fill {
+  height: 100%;
+  width: 0%;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+#xp-text {
+  font-size: 0.8rem;
+}
+
+.env-label {
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+#level {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.instructions {
+  margin-top: 15px;
+  font-size: 1.05rem;
+  opacity: 0.85;
+  text-align: center;
+}
+
+/* REMOVE UNDERLINES COMPLETELY */
+.nav-links a,
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:active {
+  text-decoration: none !important;
+}
+
+/* BETTER NAV LOOK */
+.nav-links a.active {
+  background: white;
+  color: #6886b3;
+}
+
+/* XP + LEVEL ALIGNMENT */
+.stats {
+  align-items: center;
+}
+
+/* CLEAN INSTRUCTIONS */
+
+.instructions {
+  margin-top: 20px;
+  font-size: 1.05rem;
+  opacity: 0.8;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* subtle emphasis */
+.instructions strong {
+  color: #6886b3;
+  font-weight: 500;
+}
+
+
+/* HERO LAYOUT IMPROVEMENT */
+/* remove box completely */
+.hero-content {
+  max-width: 850px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* soften text so it blends with background */
+.intro {
+  font-size: 1.3rem;
+  margin: 20px 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.env-label {
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.instructions {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* journal entry box */
+.entry {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  width: 260px;
+}
+
+/* clickable title */
+.entry-title {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* hidden fact dropdown */
+.entry-fact {
+  display: none;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* controls */
+.journal-controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.journal-controls button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #6886b3;
+  color: white;
+  cursor: pointer;
+}
+
+/* JOURNAL HINT */
+.journal-hint {
+  margin-top: 10px;
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+/* JOURNAL CONTROLS */
+.journal-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* SAME STYLE AS MAIN BUTTONS */
+.journal-btn {
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  background: #6886b3;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.journal-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ADD SPECIMEN ROW */
+.add-specimen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.add-specimen input,
+.add-specimen select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* JOURNAL ENTRIES */
+#journal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.entry {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+.entry-title {
+  font-weight: 500;
+}
+
+.entry-fact {
+  display: none;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.add-panel {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0 25px;
+}
+
+.add-panel input,
+.add-panel select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* MOBILE NAV */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    background: #6886b3;
+    width: 80%;
+    padding: 15px;
+    border-radius: 12px;
+
+    display: none; /* hidden by default */
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .stats {
+    display: none; /* optional: cleaner mobile header */
+  }
+}
+
+.instruction-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.6;
+  color: #012b22;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.instruction-link:hover {
+  opacity: 1;
+}
+
+/* LOW-KEY LINK */
+.instruction-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.instruction-link:hover {
+  opacity: 1;
+}
+
+/* MODAL BACKDROP */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 9999;
+}
+
+/* MODAL BOX */
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 480px;
+  margin: 15% auto;
+  padding: 22px;
+  border-radius: 14px;
+}
+
+/* CLOSE */
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.close:hover {
+  opacity: 1;
 }

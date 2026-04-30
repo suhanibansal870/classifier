@@ -6,105 +6,465 @@
   <title>Outdoor Odyssey</title>
 
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Ubuntu:wght@400;500&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HERO -->
+<header class="topbar">
+  <h1>Outdoor Odyssey</h1>
+
+  <!-- hamburger button -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#beach">Beach</a>
+    <a href="#mountains">Mountains</a>
+    <a href="#residential">Residential</a>
+    <a href="#redwood">Redwood</a>
+    <a href="#forest">Forest</a>
+    <a href="#journal-section">Journal</a>
+  </nav>
+
+  <div class="stats">
+    <div class="xp-container">
+      <div class="xp-bar">
+        <div id="xp-fill"></div>
+      </div>
+      <span id="xp-text">0 XP</span>
+    </div>
+    <span id="level">Beginner</span>
+  </div>
+</header>
+
 <section id="introduction">
-  <h1 class="message">Outdoor Odyssey</h1>
+  <div class="hero-content">
 
-  <p class="intro">
-    Explore nature with <b>AI-powered species identification</b>. Choose an environment below
-    and start discovering wildlife around you using image classifiers.
-  </p>
+    <h1 class="message">Outdoor Odyssey</h1>
 
-  <div class="nav-buttons">
-    <a href="#beach" class="button">Beach</a>
-    <a href="#mountains" class="button">Mountains</a>
-    <a href="#residential" class="button">Residential</a>
-    <a href="#redwood" class="button">Redwood</a>
-    <a href="#forest" class="button">Forest</a>
+    <p class="tagline">
+  A living field journal of nature exploration.
+</p>
+
+<span class="instruction-link" onclick="openInstructions()">
+  See instructions
+</span>
+
   </div>
 </section>
 
 <!-- BEACH -->
 <section id="beach" class="section alt">
-  <h2>Beach Species Identification</h2>
-  <p><b>Species:</b> barnacles, kelp, mussels, seagulls, seashells</p>
+  <h2>Beach Exploration</h2>
 
   <div class="card">
-    <img src="bch_rcrding-ezgif.com-video-to-gif-converter.gif" alt="Beach demo">
-    <a href="https://huggingface.co/spaces/sbansal28/beachclassifier" target="_blank" class="classifierbtn">
-      Get Started
-    </a>
+    <img src="bch_rcrding-ezgif.com-video-to-gif-converter.gif">
+
+    <div class="side">
+      <a href="https://huggingface.co/spaces/sbansal28/beachclassifier" target="_blank" class="classifierbtn">
+        Open Classifier
+      </a>
+
+      <div class="species-grid">
+        <div class="species" onclick="toggleSpecies(this,'Barnacles')">Barnacles</div>
+        <div class="species" onclick="toggleSpecies(this,'Kelp')">Kelp</div>
+        <div class="species" onclick="toggleSpecies(this,'Mussels')">Mussels</div>
+        <div class="species" onclick="toggleSpecies(this,'Seagulls')">Seagulls</div>
+        <div class="species" onclick="toggleSpecies(this,'Seashells')">Seashells</div>
+      </div>
+
+      <div class="fact-box"></div>
+    </div>
   </div>
 
-  <a href="#introduction" class="back-link">← Back to top</a>
+  <p class="progress" id="beach-progress">0 / 5 discovered</p>
 </section>
 
 <!-- MOUNTAINS -->
 <section id="mountains" class="section">
-  <h2>Mountain Species Identification</h2>
-  <p><b>Species:</b> birds, lizards, pine trees, squirrels</p>
+  <h2>Mountain Exploration</h2>
 
   <div class="card">
-    <a href="https://huggingface.co/spaces/sbansal28/mountain" target="_blank" class="classifierbtn">
-      Get Started
-    </a>
-    <img src="mtn-ezgif.com-video-to-gif-converter.gif" alt="Mountain demo">
+    <img src="mtn-ezgif.com-video-to-gif-converter.gif">
+
+    <div class="side">
+      <a href="https://huggingface.co/spaces/sbansal28/mountain" target="_blank" class="classifierbtn">
+        Open Classifier
+      </a>
+
+      <div class="species-grid">
+        <div class="species" onclick="toggleSpecies(this,'Birds')">Birds</div>
+        <div class="species" onclick="toggleSpecies(this,'Lizards')">Lizards</div>
+        <div class="species" onclick="toggleSpecies(this,'Pine Trees')">Pine Trees</div>
+        <div class="species" onclick="toggleSpecies(this,'Squirrels')">Squirrels</div>
+      </div>
+
+      <div class="fact-box"></div>
+    </div>
   </div>
 
-  <a href="#introduction" class="back-link">← Back to top</a>
+  <p class="progress" id="mountains-progress">0 / 4 discovered</p>
 </section>
 
 <!-- RESIDENTIAL -->
 <section id="residential" class="section alt">
-  <h2>Residential Species Identification</h2>
-  <p><b>Species:</b> bees, birds, ivy, roses, spiders</p>
+  <h2>Residential Exploration</h2>
 
   <div class="card">
-    <img src="rsdtl-ezgif.com-video-to-gif-converter.gif" alt="Residential demo">
-    <a href="https://huggingface.co/spaces/sbansal28/residential" target="_blank" class="classifierbtn">
-      Get Started
-    </a>
+    <img src="rsdtl-ezgif.com-video-to-gif-converter.gif">
+
+    <div class="side">
+      <a href="https://huggingface.co/spaces/sbansal28/residential" target="_blank" class="classifierbtn">
+        Open Classifier
+      </a>
+
+      <div class="species-grid">
+        <div class="species" onclick="toggleSpecies(this,'Bees')">Bees</div>
+        <div class="species" onclick="toggleSpecies(this,'Birds')">Birds</div>
+        <div class="species" onclick="toggleSpecies(this,'Ivy')">Ivy</div>
+        <div class="species" onclick="toggleSpecies(this,'Roses')">Roses</div>
+        <div class="species" onclick="toggleSpecies(this,'Spiders')">Spiders</div>
+      </div>
+
+      <div class="fact-box"></div>
+    </div>
   </div>
 
-  <a href="#introduction" class="back-link">← Back to top</a>
+  <p class="progress" id="residential-progress">0 / 5 discovered</p>
 </section>
 
 <!-- REDWOOD -->
 <section id="redwood" class="section">
-  <h2>Redwood Species Identification</h2>
-  <p><b>Species:</b> banana slugs, butterflies, moss, ferns</p>
+  <h2>Redwood Exploration</h2>
 
   <div class="card">
-    <a href="https://huggingface.co/spaces/sbansal28/redwood" target="_blank" class="classifierbtn">
-      Get Started
-    </a>
-    <img src="rdwd-ezgif.com-video-to-gif-converter.gif" alt="Redwood demo">
+    <img src="rdwd-ezgif.com-video-to-gif-converter.gif">
+
+    <div class="side">
+      <a href="https://huggingface.co/spaces/sbansal28/redwood" target="_blank" class="classifierbtn">
+        Open Classifier
+      </a>
+
+      <div class="species-grid">
+        <div class="species" onclick="toggleSpecies(this,'Banana Slugs')">Banana Slugs</div>
+        <div class="species" onclick="toggleSpecies(this,'Butterflies')">Butterflies</div>
+        <div class="species" onclick="toggleSpecies(this,'Moss')">Moss</div>
+        <div class="species" onclick="toggleSpecies(this,'Ferns')">Ferns</div>
+      </div>
+
+      <div class="fact-box"></div>
+    </div>
   </div>
 
-  <a href="#introduction" class="back-link">← Back to top</a>
+  <p class="progress" id="redwood-progress">0 / 4 discovered</p>
 </section>
 
 <!-- FOREST -->
 <section id="forest" class="section alt">
-  <h2>Forest Species Identification</h2>
-  <p><b>Species:</b> ants, moss, trees, wildflowers</p>
+  <h2>Forest Exploration</h2>
 
   <div class="card">
-    <img src="frst-ezgif.com-video-to-gif-converter.gif" alt="Forest demo">
-    <a href="https://huggingface.co/spaces/sbansal28/forest" target="_blank" class="classifierbtn">
-      Get Started
-    </a>
+    <img src="frst-ezgif.com-video-to-gif-converter.gif">
+
+    <div class="side">
+      <a href="https://huggingface.co/spaces/sbansal28/forest" target="_blank" class="classifierbtn">
+        Open Classifier
+      </a>
+
+      <div class="species-grid">
+        <div class="species" onclick="toggleSpecies(this,'Ants')">Ants</div>
+        <div class="species" onclick="toggleSpecies(this,'Moss')">Moss</div>
+        <div class="species" onclick="toggleSpecies(this,'Trees')">Trees</div>
+        <div class="species" onclick="toggleSpecies(this,'Wildflowers')">Wildflowers</div>
+      </div>
+
+      <div class="fact-box"></div>
+    </div>
   </div>
 
-  <a href="#introduction" class="back-link">← Back to top</a>
+  <p class="progress" id="forest-progress">0 / 4 discovered</p>
 </section>
+
+<!-- JOURNAL -->
+<!-- JOURNAL -->
+<!-- JOURNAL -->
+<section id="journal-section">
+
+  <h2>Journal</h2>
+
+  <div class="journal-controls">
+    <button class="journal-btn" onclick="setFilter('all')">All</button>
+    <button class="journal-btn" onclick="setFilter('beach')">Beach</button>
+    <button class="journal-btn" onclick="setFilter('mountains')">Mountains</button>
+    <button class="journal-btn" onclick="setFilter('residential')">Residential</button>
+    <button class="journal-btn" onclick="setFilter('redwood')">Redwood</button>
+    <button class="journal-btn" onclick="setFilter('forest')">Forest</button>
+
+    <button class="journal-btn" onclick="toggleAddPanel()">+ Add</button>
+  </div>
+
+  <!-- hidden add panel -->
+  <div id="add-panel" class="add-panel">
+    <input id="custom-name" placeholder="Specimen name..." />
+
+    <select id="custom-region">
+      <option value="beach">Beach</option>
+      <option value="mountains">Mountains</option>
+      <option value="residential">Residential</option>
+      <option value="redwood">Redwood</option>
+      <option value="forest">Forest</option>
+    </select>
+
+    <input id="custom-fact" placeholder="Optional fact (not required)" />
+
+    <button class="journal-btn" onclick="addCustom()">Save</button>
+  </div>
+
+  <div id="journal"></div>
+
+</section>
+
+<div id="instructions-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeInstructions()">×</span>
+
+    <h3>How it works</h3>
+
+    <ul>
+      <li>Choose an environment above</li>
+      <li>Open a classifier</li>
+      <li>Click species to log discoveries</li>
+      <li>Earn XP and build your journal</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+let xp = 0;
+
+/* JOURNAL DATA */
+let discoveries = JSON.parse(localStorage.getItem("discoveries")) || [];
+
+function saveDiscoveries() {
+  localStorage.setItem("discoveries", JSON.stringify(discoveries));
+}
+/* FACTS */
+const facts = {
+  Barnacles: "Barnacles attach permanently to rocks and ships.",
+  Kelp: "Kelp forms underwater forests.",
+  Mussels: "Mussels filter ocean water.",
+  Seagulls: "Seagulls adapt easily to coastal environments.",
+  Seashells: "Seashells protect marine animals.",
+
+  Birds: "Mountain birds often migrate seasonally.",
+  Lizards: "Lizards regulate body heat using sunlight.",
+  "Pine Trees": "Pine trees survive harsh cold climates.",
+  Squirrels: "Squirrels store food for winter.",
+
+  Bees: "Bees are essential pollinators.",
+  Ivy: "Ivy climbs using aerial roots.",
+  Roses: "Roses have been cultivated for thousands of years.",
+  Spiders: "Spiders help control insect populations.",
+
+  "Banana Slugs": "They can stretch to twice their size.",
+  Butterflies: "Butterflies taste with their feet.",
+  Moss: "Moss thrives in damp environments.",
+  Ferns: "Ferns reproduce using spores.",
+
+  Ants: "Ants can carry many times their weight.",
+  Trees: "Trees communicate underground.",
+  Wildflowers: "Wildflowers support pollinators."
+};
+
+/* REGIONS */
+const regionMap = {
+  beach: ["Barnacles","Kelp","Mussels","Seagulls","Seashells"],
+  mountains: ["Birds","Lizards","Pine Trees","Squirrels"],
+  residential: ["Bees","Birds","Ivy","Roses","Spiders"],
+  redwood: ["Banana Slugs","Butterflies","Moss","Ferns"],
+  forest: ["Ants","Moss","Trees","Wildflowers"]
+};
+
+/* TOGGLE SPECIES */
+function toggleSpecies(el, name) {
+  const sectionId = el.closest("section").id;
+
+  const existing = discoveries.find(d => d.name === name);
+
+  if (existing) {
+    discoveries = discoveries.filter(d => d.name !== name);
+    el.classList.remove("found");
+    xp -= 10;
+  } else {
+    discoveries.push({
+      name,
+      fact: facts[name] || "No fact available.",
+      area: sectionId
+    });
+
+    el.classList.add("found");
+    xp += 10;
+  }
+
+  saveDiscoveries();   // ✅ ADD THIS
+  updateUI();
+}
+
+/* FILTER */
+let filterMode = "all";
+
+function setFilter(mode) {
+  filterMode = mode;
+  renderJournal();
+}
+
+/* TOGGLE ADD UI */
+function toggleAddPanel() {
+  const panel = document.getElementById("add-panel");
+
+  if (panel.style.display === "flex") {
+    panel.style.display = "none";
+  } else {
+    panel.style.display = "flex";
+  }
+}
+
+/* ADD CUSTOM SPECIMEN (OPTIONAL FACT) */
+function addCustom() {
+  const name = document.getElementById("custom-name").value.trim();
+  const region = document.getElementById("custom-region").value;
+  const fact = document.getElementById("custom-fact").value.trim();
+
+  if (!name) return;
+
+  discoveries.push({
+    name,
+    fact: fact || "No fact provided.",
+    area: region
+  });
+
+  // clear inputs
+  document.getElementById("custom-name").value = "";
+  document.getElementById("custom-fact").value = "";
+
+  // CLOSE PANEL AFTER ADDING (KEY FIX)
+  document.getElementById("add-panel").style.display = "none";
+
+  renderJournal();
+  saveDiscoveries();
+}
+
+/* JOURNAL */
+function renderJournal() {
+  const container = document.getElementById("journal");
+  container.innerHTML = "";
+
+  let list = discoveries;
+
+  if (filterMode !== "all") {
+    list = discoveries.filter(d => d.area === filterMode);
+  }
+
+  if (list.length === 0) {
+    container.innerHTML = "<p style='opacity:0.6'>No discoveries yet...</p>";
+    return;
+  }
+
+  list.forEach((item, i) => {
+    const div = document.createElement("div");
+    div.className = "entry";
+
+    div.innerHTML = `
+      <div class="entry-title" onclick="toggleFact(${i})">
+        ▶ ${item.name}
+        <span style="opacity:0.5;font-size:0.8rem">(${item.area})</span>
+      </div>
+
+      <div class="entry-fact" id="fact-${i}">
+        ${item.fact}
+      </div>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+/* FACT TOGGLE */
+function toggleFact(i) {
+  const el = document.getElementById("fact-" + i);
+  if (!el) return;
+
+  el.style.display = el.style.display === "block" ? "none" : "block";
+}
+
+/* UI */
+function updateUI() {
+  document.getElementById("xp-text").innerText = xp + " XP";
+
+  const maxXP = 150;
+  const percent = Math.min((xp / maxXP) * 100, 100);
+  document.getElementById("xp-fill").style.width = percent + "%";
+
+  let level = "Beginner";
+  if (xp >= 50) level = "Explorer";
+  if (xp >= 120) level = "Naturalist";
+
+  document.getElementById("level").innerText = level;
+
+  updateProgress("beach", 5);
+  updateProgress("mountains", 4);
+  updateProgress("residential", 5);
+  updateProgress("redwood", 4);
+  updateProgress("forest", 4);
+
+  renderJournal();
+}
+
+/* PROGRESS */
+function updateProgress(section, total) {
+  const count = document.querySelectorAll(`#${section} .species.found`).length;
+  const label = section.charAt(0).toUpperCase() + section.slice(1);
+
+  document.getElementById(section + "-progress").innerText =
+    `${label}: ${count} / ${total} discovered`;
+}
+
+/* NAV ACTIVE */
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.querySelectorAll(".nav-links a").forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+
+/* INIT */
+document.addEventListener("DOMContentLoaded", updateUI);
+document.addEventListener("DOMContentLoaded", renderJournal);
+
+function toggleMenu() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("show");
+}
+
+function openInstructions() {
+  document.getElementById("instructions-modal").style.display = "block";
+}
+
+function closeInstructions() {
+  document.getElementById("instructions-modal").style.display = "none";
+}
+
+window.addEventListener("click", function (e) {
+  const modal = document.getElementById("instructions-modal");
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+</script>
 
 </body>
 </html>
