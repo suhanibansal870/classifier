@@ -269,7 +269,7 @@ button, input, select, textarea {
 
 .topbar-left {
   order: 1;
-  flex-shrink: 0;
+  flex: 1;
 }
 
 .topbar-logo {
@@ -285,6 +285,8 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 4px;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-links a {
