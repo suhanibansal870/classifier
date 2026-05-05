@@ -37,8 +37,8 @@
 
   /* Typography */
   --font-body:    'Nunito', sans-serif;
-  --font-display: 'Outfit', sans-serif;
-  --font-script:  'Outfit', sans-serif;
+  --font-display: 'DM Sans', sans-serif;
+  --font-script:  'DM Sans', sans-serif;
 
   /* Spacing */
   --gap-sm: 10px;
@@ -274,11 +274,11 @@ button, input, select, textarea {
 
 .topbar-logo {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--forest-dark);
   white-space: nowrap;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
 }
 
 /* Nav Links */
@@ -436,12 +436,12 @@ button, input, select, textarea {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 14vw, 7.5rem);
+  font-size: clamp(3.2rem, 13vw, 7rem);
   font-weight: 700;
   color: white;
   line-height: 1.0;
   margin-bottom: 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   text-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
