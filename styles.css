@@ -1258,7 +1258,7 @@ button, input, select, textarea {
   }
 
   .stats {
-    display: none;
+    display: flex;
   }
 
   /* Slide-in overlay nav */
