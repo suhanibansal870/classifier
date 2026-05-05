@@ -1261,6 +1261,14 @@ button, input, select, textarea {
     display: flex;
   }
 
+  .xp-bar {
+    width: 70px;
+  }
+
+  #xp-text {
+    display: none; /* hide the text, keep just the bar */
+  }
+
   /* Slide-in overlay nav */
   .nav-links {
     position: fixed;
